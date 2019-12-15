@@ -19,7 +19,7 @@ const CreateUser = () => {
     setUsername('')
     console.log(user)
 
-    // Sens post request to the backend endpoint
+    // Sends post request to the backend endpoint
     axios.post('http://localhost:5000/users/add', user)
     .then(res => console.log(res.data));
 
