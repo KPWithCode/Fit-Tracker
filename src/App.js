@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar"
 import ExercisesList from "./components/Exercises"
 import EditExercise from "./components/Editexercise"
-import CreateExercise from "./components/Createexcercise"
+import CreateExercise from "./components/Createexercise"
 import CreateUser from "./components/CreateUser"
 
 
