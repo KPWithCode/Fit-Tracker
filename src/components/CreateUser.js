@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const CreateUser = () => {
 
@@ -15,14 +16,20 @@ const CreateUser = () => {
     const user = {
       username
     }
-    console.log(user)
     setUsername('')
+    console.log(user)
+
+    // Sens post request to the backend endpoint
+    axios.post('http://localhost:5000/users/add', user)
+    .then(res => console.log(res.data));
+
     // window.location = '/'
   }
   return (
     <div>
         <h3> Create New User </h3>
-        <form className="form-group">
+        <form onSubmit={onSubmit} >
+          <div className="form-group">
           <label>Username: </label>
           <input 
           className="form-control"
@@ -31,6 +38,7 @@ const CreateUser = () => {
           value={username}
           onChange={onChangeUsername}
           />
+          </div>
           <div className="form-group">
             <input 
             type="submit"
