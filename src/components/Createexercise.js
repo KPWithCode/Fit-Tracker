@@ -46,6 +46,7 @@ const CreateExercise = () => {
       date
     }
     console.log(exercise)
+    
     axios.post('http://localhost:5000/exercises/add', exercise)
       .then(res => console.log(res.data))
     window.location = '/'
@@ -72,6 +73,7 @@ const CreateExercise = () => {
           <input
             type="text"
             required
+            className="form-control"
             value={description}
             onChange={onChangeDescription}
           />
@@ -90,6 +92,7 @@ const CreateExercise = () => {
           <label>Date: </label>
           <div>
             <DatePicker
+            className="form-control"
               selected={date}
               onChange={onChangeDate}
             />
