@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import DatePicker from 'react-datepicker';
 // Without this require datepicker didnt work correctly
 require('react-datepicker/dist/react-datepicker.css');
@@ -12,8 +13,15 @@ const CreateExercise = () => {
 
 
   useEffect(() => {
-    setUsers(['test user']);
-    setUsername('test username');
+
+    axios.get('http://localhost:5000/users/')
+      .then(response => {
+        if (response.data.length > 0) {
+         setUsers(response.data.map(user => user.username));
+         setUsername(response.data[0].username)
+     
+        }
+      })
   }, [])
   const onChangeUsername = (e) => {
     setUsername(e.target.value)
@@ -38,7 +46,9 @@ const CreateExercise = () => {
       date
     }
     console.log(exercise)
-    // window.location = '/'
+    axios.post('http://localhost:5000/exercises/add', exercise)
+      .then(res => console.log(res.data))
+    window.location = '/'
   }
 
   return (
@@ -67,7 +77,7 @@ const CreateExercise = () => {
           />
         </div>
         <div className="form-group">
-          <label>Duration: </label>
+          <label>Duration (in minutes): </label>
           <input
             required
             type="text"
