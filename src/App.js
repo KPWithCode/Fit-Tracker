@@ -12,7 +12,7 @@ import Home from './components/Home';
 function App() {
   return (
     <Router>
-      <div className="background" style={{ height: '100%', width: '100%' }}>
+      <div className="background">
         <div className="container">
           <Navbar />
           <br />
