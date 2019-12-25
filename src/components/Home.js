@@ -23,7 +23,7 @@ const useAnimation = (duration) => {
 }
 
 const showMessage = () => {
-    
+
 }
 
 const Home = () => {
@@ -31,7 +31,7 @@ const Home = () => {
     const progress = useAnimation(1000)
     return (
         <div>
-            <h1>On The Ball</h1>
+            <h1 style={{fontSize:'5em'}}>On The Ball</h1>
         <svg viewBox="0 0 100 100">
             <circle cx="10" cy="10" r="5 " />
             <circle cx={progress * 100} cy="50" r="5 " />

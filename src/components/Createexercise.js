@@ -53,7 +53,7 @@ const CreateExercise = () => {
   }
 
   return (
-    <div>
+    <div >
       <form onSubmit={onSubmit}>
         <h3>Add Exercise</h3>
         <div className="form-group">

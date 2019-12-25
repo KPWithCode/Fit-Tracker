@@ -26,7 +26,7 @@ const CreateUser = () => {
     // window.location = '/'
   }
   return (
-    <div>
+    <div >
         <h3> Create New User </h3>
         <form onSubmit={onSubmit} >
           <div className="form-group">
