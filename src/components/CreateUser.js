@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { motion, AnimatePresence } from "framer-motion";
 
 const CreateUser = () => {
 
@@ -25,7 +26,11 @@ const CreateUser = () => {
     // window.location = '/'
   }
   return (
-    <div >
+    <motion.div
+    animate={{x: 10}}
+    transition={{duration:2}}
+    exit={{}}
+    >
         <h3 className="title">Add Client</h3>
         <form onSubmit={onSubmit} >
           <div className="form-group mt-5">
@@ -46,7 +51,7 @@ const CreateUser = () => {
             />
           </div>
         </form>
-    </div>
+    </motion.div>
   )
 }
 
