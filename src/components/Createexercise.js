@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { motion, AnimatePresence } from "framer-motion";
 import DatePicker from 'react-datepicker';
 // Without this require datepicker didnt work correctly
 require('react-datepicker/dist/react-datepicker.css');
@@ -51,9 +52,15 @@ const CreateExercise = () => {
       .then(res => console.log(res.data))
     window.location = '/'
   }
-
   return (
-    <div >
+    <motion.div
+      // in={{opacity:0}}
+      // animate={{opacity: isVisible ? 1 : 0}}
+      // exit={{}}
+      animate={{ x: 10 }}
+      transition={{ duration: 2 }}
+      exit={{}}
+    >
       <form onSubmit={onSubmit}>
         <h3 className="title">Add Exercise</h3>
         <div className="form-group">
@@ -102,7 +109,8 @@ const CreateExercise = () => {
           />
         </div>
       </form>
-    </div>
+    </motion.div>
+
   )
 }
 
