@@ -55,9 +55,9 @@ const CreateExercise = () => {
   return (
     <div >
       <form onSubmit={onSubmit}>
-        <h3>Add Exercise</h3>
+        <h3 className="title">Add Exercise</h3>
         <div className="form-group">
-          <label>Username: </label>
+          <label className="title">Username: </label>
           {/* ref="userInput" */}
           <select
             className="form-control"
@@ -68,7 +68,7 @@ const CreateExercise = () => {
             })} </select>
         </div>
         <div className="form-group">
-          <label>Description: </label>
+          <label className="title">Description: </label>
           <input
             type="text"
             required
@@ -78,7 +78,7 @@ const CreateExercise = () => {
           />
         </div>
         <div className="form-group">
-          <label>Duration (in minutes): </label>
+          <label className="title">Duration (in minutes): </label>
           <input
             required
             type="text"
@@ -88,7 +88,7 @@ const CreateExercise = () => {
           />
         </div>
         <div className="form-group">
-          <label>Date: </label>
+          <label className="title">Date: </label>
           <div>
             <DatePicker
               className="form-control"

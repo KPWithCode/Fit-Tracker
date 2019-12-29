@@ -31,7 +31,7 @@ const Home = () => {
     return (
         <div>
             <h1 className="title " style={{fontSize:'7em'}}>On The Ball</h1>
-              <h6 className="title"style={{float:'right', fontSize:'1.5em', borderColor:'black',borderStyle:'solid', backgroundColor:'black', color:'white'}}> Track client progress</h6>
+              <h6 className="title"style={{float:'right', fontSize:'1.5em',letterSpacing:'.1em', borderColor:'black',borderStyle:'solid', backgroundColor:'black', color:'white'}}> Track client progress</h6>
             {/* <div className="" style={{display:'inline-block',borderColor:'black', borderStyle:'solid', float:'right'}}>
                 <h2 className="title" style={{fontSize:'3em', borderStyle:'dotted', display:'inline-block'  }}>Welcome</h2>
                 </div> */}
