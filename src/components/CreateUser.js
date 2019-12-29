@@ -22,15 +22,14 @@ const CreateUser = () => {
     // Sends post request to the backend endpoint
     axios.post('http://localhost:5000/users/add', user)
     .then(res => console.log(res.data));
-
     // window.location = '/'
   }
   return (
     <div >
-        <h3> Create New User </h3>
+        <h3 className="title">Add Client</h3>
         <form onSubmit={onSubmit} >
-          <div className="form-group">
-          <label>Username: </label>
+          <div className="form-group mt-5">
+          <label style={{fontSize:'1.2em'}} className="title">Username: </label>
           <input 
           className="form-control"
           type="text"
