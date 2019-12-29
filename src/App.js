@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div className="background">
-        <div className="container">
+        <div style={{marginLeft:'5%', marginRight:'5%'}}>
           <Navbar />
           <br />
        
