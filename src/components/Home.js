@@ -36,8 +36,8 @@ const Home = () => {
                 <h2 className="title" style={{fontSize:'3em', borderStyle:'dotted', display:'inline-block'  }}>Welcome</h2>
                 </div> */}
         <svg viewBox="0 0 100 100">
-            <circle cx="10" cy="10" r="5 " />
-            <circle cx={progress * 100} cy="50" r="5 " />
+            <circle cx="10" cy="10" r="5" />
+            <circle cx={progress * 100} cy="20" r="5" />
             <circle cx="20" cy={progress * 50} r="10" />
         </svg>
         
