@@ -56,7 +56,7 @@ export default class ExercisesList extends Component {
         transition={{duration:2}}
         exit={{}}
       >
-        <h3 className="title">Key Exercises</h3>
+        <h3 className="title">Client Exercise Log</h3>
         <table className="table">
           <thead className="thead-light">
             <tr className="title">

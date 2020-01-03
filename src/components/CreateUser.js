@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const CreateUser = () => {
 
@@ -23,7 +23,7 @@ const CreateUser = () => {
     // Sends post request to the backend endpoint
     axios.post('http://localhost:5000/users/add', user)
     .then(res => console.log(res.data));
-    // window.location = '/'
+    window.location = '/create'
   }
   return (
     <motion.div
